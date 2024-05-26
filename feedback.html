@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <script src="{{ url_for('static', filename='feedback.js') }}"></script>
+</head>
+<body>
+<center>
+    <h3>Feedback</h3>
+    <h1>Fale conosco!</h1>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="{{ url_for('submit') }}" method="post" oninput="checkAnonimo()">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="telefone">Telefone:</label><br>
+        <input type="text" id="telefone" name="telefone"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao"></textarea><br><br>
+        <input type="checkbox" id="anonimo" name="anonimo" value="true" checked>
+        <label for="anonimo">Anônimo</label><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</center>
+</body>
+</html>
