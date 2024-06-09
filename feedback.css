@@ -1,0 +1,113 @@
+
+/* Estilo básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px; /* Adiciona margem para espaçamento ao redor do container */
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.left-section h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.left-section h1 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: #007bff;
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.right-section {
+    flex: 1.5;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #666;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    max-height: 150px; /* Definir uma altura máxima */
+    min-height: 100px; /* Definir uma altura mínima */
+    overflow-y: auto; /* Adicionar barra de rolagem vertical quando necessário */
+    resize: none; /* Desabilita o redimensionamento da área de texto */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    background-color: #2999E7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        padding: 10px;
+    }
+}
