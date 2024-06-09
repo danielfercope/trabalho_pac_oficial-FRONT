@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='feedback.css') }}">
     <script src="{{ url_for('static', filename='feedback.js') }}"></script>
 </head>
 <body>
-<center>
-    <h3>Feedback</h3>
-    <h1>Fale conosco!</h1>
-    {% if error_message %}
-    <p style="color: red;">{{ error_message }}</p>
-    {% endif %}
-    <form action="{{ url_for('submit') }}" method="post" oninput="checkAnonimo()">
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome"><br><br>
-        <label for="telefone">Telefone:</label><br>
-        <input type="text" id="telefone" name="telefone"><br><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br><br>
-        <label for="descricao">Descrição:</label><br>
-        <textarea id="descricao" name="descricao"></textarea><br><br>
-        <input type="checkbox" id="anonimo" name="anonimo" value="true" checked>
-        <label for="anonimo">Anônimo</label><br><br>
-        <input type="submit" value="Enviar">
-    </form>
-</center>
+    <div class="container">
+        <div class="left-section">
+            <h3>Feedback</h3>
+            <h1>Fale conosco!</h1>
+            <img src="{{ url_for('static', filename='feedbackimg.png') }}" alt="Imagem de feedback">
+        </div>
+        <div class="right-section">
+            {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+            {% endif %}
+            <form action="{{ url_for('submit') }}" method="post" oninput="checkAnonimo()">
+                <label for="nome">Nome</label><br>
+                <input type="text" id="nome" name="nome"><br><br>
+                <label for="telefone">Telefone</label><br>
+                <input type="text" id="telefone" name="telefone"><br><br>
+                <label for="email">Email</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="descricao">Descreva sua opinião*</label><br>
+                <textarea id="descricao" name="descricao"></textarea><br><br>
+                <label for="anonimo">
+                    <input type="checkbox" id="anonimo" name="anonimo" value="true" checked>
+                    Anônimo
+                </label><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
