@@ -104,7 +104,7 @@ const Home = () => {
         <h2 className='titulo-poppins' style={{ color: '#2999E7' }}>Saiba onde nos encontrar</h2>
         <p>Nossa unidade de Jaraguá do Sul está localizada na cidade de Jaraguá do Sul, Estado de Santa Catarina. Para mais detalhes, confira o endereço abaixo!</p>
         <LoadScript
-          googleMapsApiKey="AIzaSyDPCZoiD85_eFHg7BuCXhcHtaJjF2uJvnc"
+          googleMapsApiKey="API_AQUI"
         >
           <GoogleMap
             mapContainerStyle={containerStyle}
