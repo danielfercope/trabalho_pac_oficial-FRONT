@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.titulo-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: extrabold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+  font-size: 2.5em;
+}
+
+.titulo-poppins-feedback{
+  font-family: 'Poppins', sans-serif;
+  font-weight: extrabold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.App {
+  text-align: center;
+}
+
+.vertical-rectangle {
+  width: 300px; 
+  height: 500px; 
+  background-color: #f5f5f5; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.vertical-rectangle-propositos {
+  width: 250px; 
+  height: 320px; 
+  background-color: #f5f5f5; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2999E7;
+}
+
+.vertical-text-p {
+  margin: 0;
+  white-space: pre-line;
+  padding: 60px; 
+  font-size: 12px; 
+}
+
+.vertical-text-propositos {
+  margin: 0;
+  white-space: pre-line;
+  padding: 20px; 
+  font-size: 12px; 
+}
+
+.profile-img {
+  height: 150px; 
+  border-radius: 50%;
+  margin-top: -15%; 
+  border: 4px solid #2999E7;
+  border-radius: 50%;
+  margin-bottom: -60px;
+}
+
+.profile-img-2 {
+  height: 150px; 
+  border-radius: 50%; 
+  margin-top: -30%; 
+  border: 4px solid #2999E7;
+  margin-right: 20px;
+}
+
+.container {
+  text-align: center;
+  background-color: #1a3e57;
+  color: white;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.left-column, .center-column, .right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  background-color: grey; /* Placeholder para o QR Code */
+  margin: 0 auto;
+}
+
+.join-us {
+  background-color: #2b6da9;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.volunteer-button {
+  background-color: #ffffff;
+  color: #2999E7;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #1a3e57;
+}
+
+.footer div {
+  flex: 1;
+  padding: 20px;
+}
+
+.partners, .support, .newsletter {
+  text-align: left;
+}
