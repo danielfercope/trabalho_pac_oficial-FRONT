@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="gestorEventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="gestorEventos.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-img"></div>
+                <div class="profile-name">
+                    <p>{Nome Sobrenome}</p>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>Gestor</li>
+                    <li>Perfil</li>
+                    <li>Controle</li>
+                    <li>Eventos</li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#">Sair da Conta</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <p>Seja <span class="username">Bem vindo, {gestor_username}</span></p>
+            </header>
+            <section class="events">
+                <div class="tabs">
+                    <button class="tab active" id="create-event-tab">Criar Eventos</button>
+                    <button class="tab" id="view-events-tab">Visualizar Eventos</button>
+                </div>
+                <div id="create-event-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="event-name">Nome do Evento</label>
+                            <input type="text" id="event-name" placeholder="Nome Evento">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="event-date">Data do Evento</label>
+                            <input type="text" id="event-date" placeholder="dd de Mês aaaa">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="event-registration-date">Data de Cadastro</label>
+                            <input type="text" id="event-registration-date" placeholder="dd de Mês aaaa">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="event-location">Local</label>
+                            <input type="text" id="event-location" placeholder="endereço">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="event-cover">Capa do Evento</label>
+                            <label for="event-cover-input" class="event-cover">
+                                <i class="fas fa-image"></i>
+                            </label>
+                            <input type="file" id="event-cover-input" accept="image/*">
+                        </div>
+                        <p></p>
+                        <button type="submit" class="save-btn">Salvar</button>
+                    </form>
+                </div>
+                <div id="view-events" class="hidden">
+                    <div class="events-cards">
+                        <div class="card">
+                            <div class="card-img"></div>
+                            <div class="card-info">
+                                <h3>Evento 1</h3>
+                                <p>Última edição: dd/mm/aaa</p>
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Deletar</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img"></div>
+                            <div class="card-info">
+                                <h3>Evento 2</h3>
+                                <p>Última edição: dd/mm/aaa</p>
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Deletar</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img"></div>
+                            <div class="card-info">
+                                <h3>Evento 3</h3>
+                                <p>Última edição: dd/mm/aaa</p>
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Deletar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
