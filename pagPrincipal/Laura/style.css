@@ -74,12 +74,15 @@ nav ul li a {
     opacity: 0;
 }
 
-.nav-item:focus, .nav-item:active {
+.nav-item:focus,
+.nav-item:active {
     font-weight: bold;
     color: #2999E7;
 }
 
-.nav-item:hover::after, .nav-item:focus::after, .nav-item:active::after {
+.nav-item:hover::after,
+.nav-item:focus::after,
+.nav-item:active::after {
     width: 100%;
     opacity: 1;
 }
@@ -99,7 +102,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Hero Section */
+/* Seção Início */
 .hero {
     position: relative;
     color: #2B2B2B;
@@ -170,16 +173,18 @@ nav ul li a {
     max-width: 50%;
 }
 
-.about-us-content h3{
+.about-us-content h3 {
+    text-align: left;
     color: #2B2B2B;
-    font-size: 15px;
+    font-size: 17px;
+    margin-left: 150px;
 }
 
 .about-us-content h2 {
     color: #2999E7;
     font-size: 3rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin-bottom: 3rem;
     text-shadow: 1px 1px 4px rgba(8, 27, 41, 0.5);
 }
@@ -212,11 +217,6 @@ nav ul li a {
     z-index: 1;
 }
 
-.img-jornada:hover {
-    width: 105%;
-    transition: 0.3s;
-}
-
 .img-jornada {
     width: 95%;
     max-width: 500px;
@@ -225,7 +225,12 @@ nav ul li a {
     transition: transform 0.3s;
 }
 
-/* Projects and Events Section */
+.img-jornada:hover {
+    width: 105%;
+    transition: 0.3s;
+}
+
+/* Seção Projetos e Eventos */
 .projects-events {
     padding: 5rem 3rem;
     background-color: #039BE5;
@@ -261,12 +266,14 @@ nav ul li a {
 }
 
 .projects-events-content {
+    padding-left: 5rem;
     text-align: justify;
     color: #FFFEF5;
     max-width: 50%;
 }
 
 .projects-events-content h3 {
+    font-size: 17px;
     color: #2B2B2B;
 }
 
@@ -294,15 +301,23 @@ nav ul li a {
 }
 
 
-/* Estilos para a seção de propósitos */
+/* Seção Propósitos */
 #propositos {
     padding: 100px 0;
     text-align: center;
     background-color: #FFFEF5;
 }
 
+#propositos h3 {
+    color: #2B2B2B;
+    font-size: 17px;
+    text-align: left;
+    margin-left: 30%;
+}
+
 #propositos h2 {
     color: #2999E7;
+    text-shadow: 1px 1px 4px rgba(8, 27, 41, 0.5);
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -326,16 +341,46 @@ nav ul li a {
     padding: 2rem;
     margin: 1rem;
     width: 300px;
-    text-align: left;
     position: relative;
-    text-align: justify;
+    overflow: hidden;
+    height: 490px;
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 140%;
+    background-color: #2999E7;
+    animation: animate 10s linear infinite;
+    transform-origin: top left;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #FFFEF5;
+    border-radius: 28px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .card-icon {
     position: absolute;
-    top: -44px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 .card-icon img {
@@ -343,14 +388,14 @@ nav ul li a {
     height: 100px;
 }
 
-.card h3 {
+.card p,
+.card ul {
+    text-align: justify;
     color: #2B2B2B;
-    margin-top: 40px;
-    margin-bottom: 1rem;
-}
-
-.card p, .card ul {
-    color: #2B2B2B;
+    margin-top: 140px;
+    margin-right: 30px;
+    position: absolute;
+    z-index: 1;
 }
 
 .card ul {
@@ -368,4 +413,176 @@ nav ul li a {
     color: #2999E7;
     position: absolute;
     left: -15px;
+}
+
+.card h3 {
+    color: #2B2B2B;
+    margin-top: 80px;
+    margin-bottom: 1rem;
+    position: absolute;
+    z-index: 1;
+    width: 240px;
+    text-align: center;
+}
+
+/* Seção Equipe */
+
+
+.owl-carousel .owl-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-equipe h3 {
+    text-align: left;
+    color: #2B2B2B;
+    font-size: 17px;
+    margin-left: 30%;
+}
+
+.titulo-equipe h2 {
+    color: #2999E7;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 4px rgba(8, 27, 41, 0.5);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption h5 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.carousel-item {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    padding-bottom: 1px;
+    background: #FFFEF5;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item2 {
+    margin: 30px;
+}
+
+.carousel-item p {
+    text-align: justify;
+}
+
+.carousel-item h3 {
+    color: #2999E7;
+    text-align: center;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.owl-prev {
+    left: 10px;
+}
+
+.owl-next {
+    right: 10px;
+}
+
+/* Seção Parcerias*/
+.parcerias {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.parcerias h3 {
+    font-size: 17px;
+    color: #000;
+    text-align: left;
+    margin-left: 31%;
+}
+
+.parcerias h1 {
+    color: #2999E7;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 4px rgba(8, 27, 41, 0.5);
+}
+
+.parcerias p {
+    width: 1100px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+    margin: 0 auto;
+}
+
+.logos {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logos a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    max-width: 100px;
+}
+
+.logos img {
+    margin-top: 80px;
+    max-width: 100px;
+    max-height: 800px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.4);
+}
+
+@media (max-width: 600px) {
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logos img {
+        max-width: 80px;
+        max-height: 40px;
+    }
 }
