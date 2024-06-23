@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <title>Gestor Eventos</title>
     <link rel="stylesheet" type="text/css" href="gestorEventos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="gestorEventos.js"></script>
 </head>
 <body>
+    <!-- Menu lateral e título da aba -->
     <div class="container">
         <aside class="sidebar">
             <div class="profile">
@@ -33,11 +34,17 @@
             <header class="header">
                 <p>Seja <span class="username">Bem vindo, {gestor_username}</span></p>
             </header>
+
+            <!-- Aba principal -->
             <section class="events">
+                
+                <!-- Botões troca de aba -->
                 <div class="tabs">
                     <button class="tab active" id="create-event-tab">Criar Eventos</button>
                     <button class="tab" id="view-events-tab">Visualizar Eventos</button>
                 </div>
+
+                <!-- Aba criar eventos -->
                 <div id="create-event-form">
                     <form>
                         <div class="form-group">
@@ -75,6 +82,8 @@
                         <button type="submit" class="save-btn">Salvar</button>
                     </form>
                 </div>
+
+                <!-- Aba visualizar eventos -->
                 <div id="view-events" class="hidden">
                     <div class="events-cards">
                         <div class="card">
