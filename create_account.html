@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="style_create.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Criar Conta</h1>
+            <p class="create_text">Crie uma conta para se voluntariar!</p>
+            <p class="create_text">Seus dados não serão compartilhados com ninguém</p>
+            <form id="create-account-form">
+                <label for="name">Nome</label>
+                <input id="createName" name="name" type="text" placeholder="Digite seu nome">
+                <label for="email">E-mail</label>
+                <input id="createEmail" name="email" type="text" placeholder="Digite seu e-mail">
+                <label for="password">Senha</label>
+                <input id="createPassword" name="password" type="password" placeholder="Digite sua senha">
+                <button class="create" type="submit">Criar conta</button>
+            </form>
+        </div>
+        <div class="welcome-container">
+            <h2>Olá, Amigo!</h2>
+            <p>Cadastre seus dados pessoais e junte-se a nós nessa jornada</p>
+            <button class="login-btn">Login</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('create-account-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                createName: document.getElementById('createName').value,
+                createEmail: document.getElementById('createEmail').value,
+                createPassword: document.getElementById('createPassword').value
+            };
+
+            fetch('http://localhost:5000/createAccount', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Erro: ' + data.error);
+                } else {
+                    alert('Usuário criado com sucesso!');
+                    document.getElementById('create-account-form').reset();
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o formulário:', error);
+                alert('Erro ao enviar o formulário. Tente novamente.');
+            });
+        });
+    </script>
+</body>
+</html>
