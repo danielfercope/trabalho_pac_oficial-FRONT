@@ -37,7 +37,7 @@
 
             <!-- Aba principal -->
             <section class="events">
-                
+
                 <!-- Botões troca de aba -->
                 <div class="tabs">
                     <button class="tab active" id="create-event-tab">Criar Eventos</button>
@@ -86,35 +86,53 @@
                 <!-- Aba visualizar eventos -->
                 <div id="view-events" class="hidden">
                     <div class="events-cards">
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                                <h3>Evento 1</h3>
-                                <p>Última edição: dd/mm/aaa</p>
-                                <button class="edit-btn">Editar</button>
-                                <button class="delete-btn">Deletar</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                                <h3>Evento 2</h3>
-                                <p>Última edição: dd/mm/aaa</p>
-                                <button class="edit-btn">Editar</button>
-                                <button class="delete-btn">Deletar</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img"></div>
-                            <div class="card-info">
-                                <h3>Evento 3</h3>
-                                <p>Última edição: dd/mm/aaa</p>
-                                <button class="edit-btn">Editar</button>
-                                <button class="delete-btn">Deletar</button>
-                            </div>
-                        </div>
+                        <!-- Eventos serão carregados aqui pelo banco de dados -->
                     </div>
                 </div>
+
+                <!-- Popup de Deletar evento  -->
+                <div id="confirmation-modal" class="hidden modal">
+                    <div class="modal-content">
+                        <p>Tem certeza que deseja deletar este evento?</p>
+                        <button id="confirm-delete-btn">Sim</button>
+                        <button id="cancel-delete-btn">Não</button>
+                    </div>
+                </div>
+
+                <!-- Popup de Editar evento -->
+                <div id="edit-event-popup" class="hidden">
+                    <form>
+                        <div class="form-group">
+                            <label for="edit-event-name">Nome do Evento</label>
+                            <input type="text" id="edit-event-name" placeholder="Nome Evento">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="edit-event-date">Data do Evento</label>
+                            <input type="text" id="edit-event-date" placeholder="dd de Mês aaaa">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="edit-event-location">Local</label>
+                            <input type="text" id="edit-event-location" placeholder="endereço">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                            <label for="edit-event-cover">Capa do Evento</label>
+                            <label for="edit-event-cover-input" class="event-cover">
+                                <i class="fas fa-image"></i>
+                            </label>
+                            <input type="file" id="edit-event-cover-input" accept="image/*">
+                        </div>
+                        <p></p>
+                        <button type="submit" class="save-btn">Salvar Alterações</button>
+                        <button id="cancel-edit-btn">Cancelar</button>
+                    </form>
+                </div>
+                
             </section>
         </main>
     </div>
