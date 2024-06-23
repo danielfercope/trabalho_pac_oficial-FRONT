@@ -1,3 +1,4 @@
+/* Troca de abas Eventos */
 document.addEventListener('DOMContentLoaded', function() {
     const createEventTab = document.getElementById('create-event-tab');
     const viewEventsTab = document.getElementById('view-events-tab');
