@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Bem Vindo!</h2>
+            <p>Para continuar conectado conosco, favor fazer login com sua conta</p>
+            <a href="create_account.html">
+                <button>Criar Conta</button>
+            </a>
+        </div>
+        <div class="right">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="password" type="password" placeholder="Senha" required>
+                <div class="forgot-password"><a href="#">Esqueceu sua senha?</a></div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const data = {
+                email: email,
+                password: password
+            };
+
+            fetch('http://127.0.0.1:5000/validacao_usuario', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.authenticated) {
+                    alert('Login bem-sucedido!');
+                    window.location.href = '/dashboard.html'; 
+                } else {
+                    alert('Credenciais inválidas. Por favor, tente novamente.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao tentar fazer login:', error);
+                alert('Erro ao tentar fazer login. Por favor, tente novamente.');
+            });
+        });
+    </script>
+</body>
+</html>

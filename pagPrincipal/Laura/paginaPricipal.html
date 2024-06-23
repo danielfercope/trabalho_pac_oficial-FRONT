@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigos em Ação</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -18,7 +18,7 @@
         <nav>
             <div class="left-section">
                 <div class="logo">
-                    <img class="logo-img" src="assets/logo.svg" alt="Logo Amigos em Ação">
+                    <img class="logo-img" src="images/logo.svg" alt="Logo Amigos em Ação">
                 </div>
                 <ul>
                     <li><a href="#inicio" class="nav-item">Início</a></li>
@@ -31,8 +31,8 @@
                 </ul>
             </div>
             <div class="auth">
-                <a href="#">Entrar</a>
-                <a href="#">Se voluntariar</a>
+                <a href="login.html">Entrar</a>
+                <a href="create_account.html">Se voluntariar</a>
             </div>
         </nav>
     </header>
@@ -41,12 +41,12 @@
         <!-- Seção Início -->
 
         <section id="inicio" class="hero">
-            <img src="assets/img-inicio.png" alt="Imagem de ajuda" class="hero-image">
+            <img src="images/img-inicio.png" alt="Imagem de ajuda" class="hero-image">
             <div class="hero-content">
                 <h1>Há mais de 20 anos<br><span>Transformando<br>Vidas!</span></h1>
                 <div class="hero-buttons">
-                    <a href="#" class="btn primary">Quero ajudar</a>
-                    <a href="#" class="btn secondary">Procuro ajuda</a>
+                    <a href="create_account.html" class="btn primary">Quero ajudar</a>
+                    <a href="index_carente.html" class="btn secondary">Procuro ajuda</a>
                 </div>
             </div>
         </section>
@@ -65,8 +65,8 @@
                 <p>Nós somos os Amigos em Ação!</p>
             </div>
             <div class="about-us-image">
-                <img class="stroke-jornada" src="assets/stroke-jornada.png" alt="">
-                <img class="img-jornada" src="assets/img-jornada.png" alt="Equipe Amigos em Ação">
+                <img class="stroke-jornada" src="images/stroke-jornada.png" alt="">
+                <img class="img-jornada" src="images/img-jornada.png" alt="Equipe Amigos em Ação">
             </div>
         </section>
 
@@ -75,10 +75,10 @@
         <section id="eventos" class="projects-events">
             <div class="projects-events-container">
                 <div class="mosaic">
-                    <img class="diag-dir" src="assets/img-feijoada.jpg" alt="Imagem 1">
-                    <img class="diag-esq" src="assets/img-crianca.jpg" alt="Imagem 2">
-                    <img class="diag-esq" src="assets/img-agasalhos.jpg" alt="Imagem 3">
-                    <img class="diag-dir" src="assets/img-reciclagem.jpg" alt="Imagem 4">
+                    <img class="diag-dir" src="images/img-agasalhos.jpg" alt="Imagem 1">
+                    <img class="diag-esq" src="images/img-crianca.jpg" alt="Imagem 2">
+                    <img class="diag-esq" src="images/img-feijoada.jpg" alt="Imagem 3">
+                    <img class="diag-dir" src="images/img-reciclagem.jpg" alt="Imagem 4">
                 </div>
                 <div class="projects-events-content">
                     <br>
@@ -174,7 +174,8 @@
                         <br>
                         <p>
                             &emsp;&emsp; Comecei em 2014. Inicialmente, o objetivo era ajudar outras pessoas como forma
-                            de agradecer pelas conquistas obtidas, ter saúde, poder crescer profissionalmente, entre outros motivos.
+                            de agradecer pelas conquistas obtidas, ter saúde, poder crescer profissionalmente, entre
+                            outros motivos.
                             &emsp;&emsp; Com o tempo e as experiências dessa fantástica jornada como voluntário,
                             descobri que praticar o bem, além do aprendizado em si, traz uma sensação de satisfação, de
                             plenitude, uma sensação de que na verdade, mais do que poder transformar a vida do outro, eu
@@ -187,7 +188,35 @@
 
         <!-- Seção Localização -->
 
-        <section id="localizacao" class="section">Localização Content</section>
+        <section id="localizacao" class="section">
+            <h2 class='titulo-poppins' style=color:#2999E7>Saiba onde nos encontrar</h2>
+            <p>Nossa unidade de Jaraguá do Sul está localizada na cidade de Jaraguá do Sul, Estado de Santa Catarina.
+                Para mais detalhes, confira o endereço abaixo!</p>
+            <div id="map" style="height: 400px; width: 50%; margin: 0 auto;"></div>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCZoiD85_eFHg7BuCXhcHtaJjF2uJvnc&callback=initMap"
+                async defer></script>
+            <script>
+                function initMap() {
+                    const center = { lat: -26.488872528076172, lng: -49.09482955932617 };
+
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: center,
+                        zoom: 15
+                    });
+
+                    new google.maps.Marker({
+                        position: center,
+                        map: map
+                    });
+                }
+            </script>
+            <p><strong>Arena Jaraguá</strong> – Rua Gustavo Hagedorn, 636 – Sala 18 – Nova Brasília, Jaraguá do Sul – SC
+            </p>
+        </section>
+
+
+
 
         <!-- Seção Propósitos -->
 
@@ -200,7 +229,7 @@
             <div class="cards-container">
                 <div class="card">
                     <div class="card-icon">
-                        <img src="assets/missao-img.png" alt="Missão">
+                        <img src="images/missao-img.png" alt="Missão">
                     </div>
                     <h3>Missão</h3>
                     <p>
@@ -212,7 +241,7 @@
                 </div>
                 <div class="card">
                     <div class="card-icon">
-                        <img src="assets/visao-img.png" alt="Visão">
+                        <img src="images/visao-img.png" alt="Visão">
                     </div>
                     <h3>Visão</h3>
                     <p>
@@ -223,7 +252,7 @@
                 </div>
                 <div class="card">
                     <div class="card-icon">
-                        <img src="assets/valores-img.png" alt="Valores">
+                        <img src="images/valores-img.png" alt="Valores">
                     </div>
                     <h3>Valores</h3>
                     <ul>
@@ -240,7 +269,44 @@
             </div>
         </section>
 
-        <section id="feedback" class="section">Feedback Content</section>
+
+
+
+        <section id="feedback">
+            <div class="feedback-header">
+                <h3>Feedback</h3>
+                <h2 class="titulo-poppins-feedback">Fale conosco</h2>
+            </div>
+            <div style="text-align: left">
+                <img src="images/Group 1965.png" alt="Imagem de feedback" />
+            </div>
+            <div class="feedback-form">
+                <p class="error" style="display: none;">Erro na submissão</p>
+                <form>
+                    <label for="nome">Nome</label><br />
+                    <input type="text" id="nome" name="nome"><br />
+
+                    <label for="telefone">Telefone</label><br />
+                    <input type="text" id="telefone" name="telefone"><br />
+
+                    <label for="email">E-mail</label><br />
+                    <input type="text" id="email" name="email"><br />
+
+                    <label for="descricao">Descreva sua opinião*</label><br />
+                    <textarea id="descricao" name="descricao"></textarea><br />
+
+                    <label for="anonimo">
+                        <input type="checkbox" id="anonimo" name="anonimo">
+                        Anônimo
+                    </label><br />
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+
+
+
 
         <section class="parcerias">
             <h3>Parcerias</h3>
@@ -250,25 +316,25 @@
 
             <div class="logos">
                 <a href="https://www.weg.net/" target="_blank">
-                    <img src="assets/Logo WEG 1.png" alt="Weg">
+                    <img src="images/Logo WEG 1.png" alt="Weg">
                 </a>
                 <a href="https://www.instagram.com/sleepwaypijamas" target="_blank">
-                    <img src="assets/Sleep Way Pijamas Logo_page-0001.jpg" alt="Sleep Way Pijamas">
+                    <img src="images/Sleep Way Pijamas Logo_page-0001.jpg" alt="Sleep Way Pijamas">
                 </a>
                 <a href="https://grupoflexivel.com.br/" target="_blank">
-                    <img src="assets/Flexível  Grupo - Logotipo-01.png" alt="Grupo Flexível">
+                    <img src="images/Flexível  Grupo - Logotipo-01.png" alt="Grupo Flexível">
                 </a>
                 <a href="https://www.ensinoalfa.com.br/" target="_blank">
-                    <img src="assets/LOGO ALFA COLOR (1).png" alt="Colégio Alfa">
+                    <img src="images/LOGO ALFA COLOR (1).png" alt="Colégio Alfa">
                 </a>
                 <a href="https://www.receituario.com.br/" target="_blank">
-                    <img src="assets/logoFarmaciaReceituario.svg" alt="Farmácia Receituário">
+                    <img src="images/logoFarmaciaReceituario.svg" alt="Farmácia Receituário">
                 </a>
                 <a href="https://www.instagram.com/lilienaty_pilates/" target="_blank">
-                    <img src="assets/logoStdPilates.png" alt="Lili & Naty Studio de Pilates">
+                    <img src="images/logoStdPilates.png" alt="Lili & Naty Studio de Pilates">
                 </a>
                 <a href="https://saoluis.colegiosmaristas.com.br/" target="_blank">
-                    <img src="assets/logoMarista.png" alt="Colégio Marista">
+                    <img src="images/logoMarista.png" alt="Colégio Marista">
                 </a>
             </div>
 
@@ -297,6 +363,57 @@
             });
         });
     </script>
+
+    <div class="container">
+        <header class="header">
+
+        </header>
+        <div class="content">
+            <div class="left-column">
+                <p>Nossa ONG não dispõe de recursos próprios, dependemos, assim, das doações dos associados para
+                    realizar trabalhos.
+                    Todo valor arrecadado é convertido em doações às famílias carentes e aos projetos sociais atendidos
+                    nesta data.
+                    Portanto, caso deseje contribuir conosco em dinheiro, aceitamos com muita felicidade e gratidão
+                    qualquer quantia!</p>
+            </div>
+            <div class="center-column">
+                <img src="qr-code-placeholder.png" alt="QR Code" class="qr-code">
+                <p>LINK</p>
+            </div>
+            <div class="right-column">
+                <p>Informações bancárias</p>
+                <p>Agência 2727</p>
+                <p>Dígito 8</p>
+                <p>Conta 14531</p>
+                <p>Dígito 9</p>
+            </div>
+        </div>
+        <div class="join-us">
+            <h2>Quer se juntar a nós?</h2>
+            <p>Além de ajudar de forma anônima você pode também se juntar aos mais de 100 voluntários de nossa equipe e
+                nos ajudar a transformar vidas, o receberemos de braços abertos!</p>
+                <br>
+                <a class="login-btn" href="create_account.html">
+                    Se voluntariar
+                </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="support">
+                <h3>Suporte</h3>
+                <p>amigosemacaoaj@gmail.com</p>
+                <p>47-98822-1707</p>
+                <p>Contato Gestor</p>
+            </div>
+            <div class="newsletter">
+                <h3>Fique por dentro das novidades</h3>
+                <p>Termos de Serviço</p>
+                <p>Política de Privacidade</p>
+            </div>
+        </footer>
+    </div>
+
 
 </body>
 
