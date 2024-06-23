@@ -10,7 +10,7 @@ body, html {
     height: 100vh;
 }
 
-/* Sidebar Styles */
+/* Barra lateral estilo */
 .sidebar {
     width: 250px;
     background-color: #f4f4f4;
@@ -77,13 +77,14 @@ body, html {
     font-weight: bold;
 }
 
-/* Events Section Styles */
+/* Background da aba principal */
 .events {
     background-color: #e3e3e3;
     padding: 20px;
     border-radius: 10px;
 }
 
+/* Botões troca de aba */
 .tabs {
     display: flex;
     justify-content: space-around;
@@ -103,6 +104,7 @@ body, html {
     border-bottom: 2px solid #00f;
 }
 
+/* Criar eventos */
 .create-event-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -218,19 +220,6 @@ body, html {
     color: #0056b3;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
-    .main-content {
-        padding: 10px;
-    }
-}
 
 /* Ocultar seção */
 .hidden {
@@ -244,7 +233,7 @@ body, html {
 }
 
 
-/* Responsive Styles */
+/* Estilo responsivo */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -260,5 +249,3 @@ body, html {
         grid-template-columns: 1fr;
     }
 }
-
-
