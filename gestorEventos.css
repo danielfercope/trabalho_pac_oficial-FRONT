@@ -1,172 +1,177 @@
 /* General Styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 /* Barra lateral estilo */
 .sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+  width: 250px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .profile {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .profile-name p {
-    margin: 0;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Certifica-se que o menu ocupa a altura total do contêiner */
 }
 
 .menu ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Faz com que os itens fiquem em coluna */
+  align-items: center; /* Centraliza os itens na coluna */
+  margin-top: -400px; /* Move a lista para cima */
 }
 
 .menu ul li {
-    padding: 10px 20px;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-}
-
-.menu ul li:hover {
-    background-color: #ddd;
+  margin: 15px 0; /* Adiciona espaçamento vertical entre os itens */
 }
 
 .logout {
-    margin-top: auto;
-    padding: 20px;
+  margin-top: auto;
+  padding: 20px;
 }
 
 .logout a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 /* Main Content Styles */
 .main-content {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 .header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .header .username {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Background da aba principal */
 .events {
-    background-color: #e3e3e3;
-    padding: 20px;
-    border-radius: 10px;
+  background-color: #e3e3e3;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Botões troca de aba */
 .tabs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-weight: bold;
-    color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: #333;
 }
 
 .tab.active {
-    border-bottom: 2px solid #00f;
+  border-bottom: 2px solid #00f;
 }
 
 /* Criar eventos */
 .create-event-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form-group input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-group i {
-    position: absolute;
-    right: 10px;
-    top: 35px;
-    color: #aaa;
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  color: #aaa;
 }
 
 .event-cover {
-    width: 100%;
-    height: 100px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+  width: 100%;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
 .event-cover i {
-    font-size: 2em;
-    color: #aaa;
+  font-size: 2em;
+  color: #aaa;
 }
 
 .save-btn {
-    grid-column: span 2;
-    padding: 10px 20px;
-    background-color: #00f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center;
+  grid-column: span 2;
+  padding: 10px 20px;
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
 }
 
 .save-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 
@@ -174,134 +179,134 @@ body, html {
 
 /* Visualizar eventos */
 .events-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
 }
 
 .card-img {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    margin: 0 auto 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  margin: 0 auto 10px;
 }
 
 .card-info h3 {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 .card-info p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .card-actions {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
 .edit-btn, .delete-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
 .edit-btn:hover, .delete-btn:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 
 /* Estilo do Popup deletar eventos */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .modal-content p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal-content button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .modal-content button:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* Estilo do Popup editar eventos */
 #edit-event-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    max-width: 400px;
-    display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 400px;
+  display: none;
 }
 
 #edit-event-popup.visible {
-    display: block;
+  display: block;
 }
 
 
 /* Ocultar seção */
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* Estilo do botão ativo */
 .tab.active {
-    border-bottom: 2px solid #00f;
-    font-weight: bold;
+  border-bottom: 2px solid #00f;
+  font-weight: bold;
 }
 
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
-    .main-content {
-        padding: 10px;
-    }
-    .create-event-form {
-        grid-template-columns: 1fr;
-    }
+  .container {
+      flex-direction: column;
+  }
+  .sidebar {
+      width: 100%;
+      height: auto;
+  }
+  .main-content {
+      padding: 10px;
+  }
+  .create-event-form {
+      grid-template-columns: 1fr;
+  }
 }
