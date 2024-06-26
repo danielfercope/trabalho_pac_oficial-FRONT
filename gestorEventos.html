@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor Eventos</title>
-    <link rel="stylesheet" type="text/css" href="gestorEventos.css">
+    <link rel="stylesheet" type="text/css" href="gestor_eventos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="gestorEventos.js"></script>
+    <script defer src="gestor_eventos.js"></script>
 </head>
 <body>
     <!-- Menu lateral e título da aba -->
@@ -14,9 +14,6 @@
         <aside class="sidebar">
             <div class="profile">
                 <div class="profile-img"></div>
-                <div class="profile-name">
-                    <p>{Nome Sobrenome}</p>
-                </div>
             </div>
             <nav class="menu">
                 <ul>
@@ -55,28 +52,18 @@
                         <p></p>
                         <div class="form-group">
                             <label for="event-date">Data do Evento</label>
-                            <input type="text" id="event-date" placeholder="dd de Mês aaaa">
-                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="event-date" placeholder="dd de Mês aaaa">
                         </div>
                         <p></p>
                         <div class="form-group">
                             <label for="event-registration-date">Data de Cadastro</label>
-                            <input type="text" id="event-registration-date" placeholder="dd de Mês aaaa">
-                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="event-registration-date" placeholder="dd de Mês aaaa">
                         </div>
                         <p></p>
                         <div class="form-group">
                             <label for="event-location">Local</label>
                             <input type="text" id="event-location" placeholder="endereço">
                             <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <p></p>
-                        <div class="form-group">
-                            <label for="event-cover">Capa do Evento</label>
-                            <label for="event-cover-input" class="event-cover">
-                                <i class="fas fa-image"></i>
-                            </label>
-                            <input type="file" id="event-cover-input" accept="image/*">
                         </div>
                         <p></p>
                         <button type="submit" class="save-btn">Salvar</button>
@@ -110,8 +97,7 @@
                         <p></p>
                         <div class="form-group">
                             <label for="edit-event-date">Data do Evento</label>
-                            <input type="text" id="edit-event-date" placeholder="dd de Mês aaaa">
-                            <i class="fas fa-calendar-alt"></i>
+                            <input type="Date" id="edit-event-date" placeholder="dd de Mês aaaa">
                         </div>
                         <p></p>
                         <div class="form-group">
