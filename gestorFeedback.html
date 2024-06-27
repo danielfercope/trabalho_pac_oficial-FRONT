@@ -41,20 +41,23 @@
                     <div class="tab active" id="feed-tab">Feedbacks</div>
                 </div>
                 
-                <!-- Botão feed--> 
+                <!-- Feedbacks--> 
                 <div id="feed-form">
                     <div class="botoes-feed">
-                        <button class="card" id="bot-fed">
+                        <div class="card" id="bot-fed">
                             <div class="card-header">
                                 <div class="card-header-icon">
                                     <i class="fa-solid fa-arrow-down"></i>
                                     <span>Feedback do usuario João</span>
                                 </div>
-                                <span>dd/mm/aa</span>
+                                <div class="card-header-right">
+                                    <span>dd/mm/aa</span>
+                                    <button class="bot-deleta-feed"><i class="fa-solid fa-trash"></i></button>
+                                </div>
                             </div>
-                        </button>
-                        <button class="bot-deleta"><i class="fa-solid fa-trash"></i></button>
+                        </div>
                     </div> 
+                    <!-- Dropdown--> 
                     <div class="dropdown-content" id="dropdown-fed">
                         <div class="descricao-dados-container">
                             <div class="descricao-feed">
@@ -65,6 +68,15 @@
                                 <p>Email:</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Popup de Deletar feedback -->
+                <div id="confirmation-modal-feed" class="hidden modal">
+                    <div class="modal-content-feed">
+                        <p>Tem certeza que deseja deletar este feedback?</p>
+                        <button id="confirm-delete-feed">Sim</button>
+                        <button id="cancel-delete-feed">Não</button>
                     </div>
                 </div>
             </section>
