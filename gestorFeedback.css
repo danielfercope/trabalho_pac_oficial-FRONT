@@ -84,7 +84,7 @@ body, html {
     border-radius: 10px;
 }
 
-/* Botões troca de aba */
+/* titulo da aba */
 .tabs {
     display: flex;
     justify-content: space-around;
@@ -104,10 +104,10 @@ body, html {
     border-bottom: 2px solid #00f;
 }
 
-/* feedback */
+/* feedbacks */
 .feed-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     background-color: #fff;
     padding: 20px;
@@ -136,7 +136,6 @@ body, html {
     text-align: left;
     padding: 10px;
     font-size: 16px;
-    font-weight: bold;
     border-radius: 5px;
     margin-bottom: 10px;
     display: block;
@@ -154,6 +153,17 @@ body, html {
     justify-content: space-between;
 }
 
+.card-header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.card-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .card-body {
     display: flex;
     align-items: center;
@@ -166,21 +176,8 @@ body, html {
     margin-right: 10px;
 }
 
-.progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
 
-.progress {
-    background-color: blue;
-    height: 10px;
-}
-
-.progress-percent {
-    font-weight: bold;
-}
-
+/*Dropdown*/
 .dropdown-content {
     display: none;
     background-color: #f9f9f9;
@@ -211,30 +208,44 @@ body, html {
     border-radius: 5px;
 }
 
-.botoes-feed{
+/* Popup deletar feedbacks */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
 }
 
-.bot-deleta{
-    background-color: #f5f5f5;
+.modal-content-feed {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content-feed p {
+    margin-bottom: 20px;
+}
+
+.modal-content-feed button {
+    padding: 10px 20px;
+    margin: 5px;
     border: none;
-    cursor: pointer;
-    text-align: left;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
     border-radius: 5px;
-    margin-bottom: 10px;
-    display: block;
-    transition: background-color 0.3s;
-    box-sizing: border-box;
+    cursor: pointer;
 }
 
-.bot-deleta:hover {
-    background-color: #e0e0e0;
+.modal-content-feed button:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Estilo responsivo */
