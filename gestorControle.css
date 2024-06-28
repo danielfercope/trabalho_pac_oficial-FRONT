@@ -2,7 +2,11 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu a.active {
+    color: #2999E7;
 }
 
 .container {
@@ -12,45 +16,52 @@ body, html {
 
 /* Barra lateral estilo */
 .sidebar {
+    background-color: #e3e3e338;
     width: 250px;
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .profile {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-img {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
-    border-radius: 50%;
     margin-bottom: 10px;
-}
-
-.profile-name p {
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu ul {
     list-style: none;
     padding: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .menu ul li {
-    padding: 10px 20px;
-    text-align: center;
+    padding: 10px 0;
     width: 100%;
     cursor: pointer;
 }
 
-.menu ul li:hover {
-    background-color: #ddd;
+.menu ul a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu ul a:hover {
+    color: #2999E7;
 }
 
 .logout {
@@ -61,6 +72,10 @@ body, html {
 .logout a {
     text-decoration: none;
     color: #000;
+}
+
+.logout a:hover {
+    color: #2999E7;
 }
 
 /* Main Content Styles */
@@ -74,12 +89,17 @@ body, html {
 }
 
 .header .username {
+    font-size: 2.5em;
     font-weight: bold;
+}
+
+.header span{
+    color: #2999E7;
 }
 
 /* Background da aba principal */
 .control {
-    background-color: #e3e3e3;
+    background-color: #e3e3e338;
     padding: 20px;
     border-radius: 10px;
 }
@@ -91,6 +111,11 @@ body, html {
     margin-bottom: 20px;
 }
 
+.tabs button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
 .tab {
     padding: 10px 20px;
     cursor: pointer;
@@ -100,8 +125,13 @@ body, html {
     color: #333;
 }
 
+.tab:hover {
+    color: #2999E7;
+}
+
 .tab.active {
-    border-bottom: 2px solid #00f;
+    color: #2999E7;
+    border-bottom: 2px solid #2999E7;
 }
 
 /* controle */
@@ -116,13 +146,20 @@ body, html {
 }
 
 .fa-solid {
-    color: #00f;
+    color: #2999E7;
+    background-color: transparent;
 }
 
 /* Estilos adicionais, se necessário */
 .icon-large {
     font-size: 24px;
-    color: blue;
+    color: #2999E7;
+    background-color: transparent;
+}
+
+#delete {
+    color: #f06b6b;
+    background-color: transparent;
 }
 
 /* Cartões de controle */
@@ -172,7 +209,7 @@ body, html {
 }
 
 .progress {
-    background-color: blue;
+    background-color: #2999E7;
     height: 10px;
 }
 
@@ -207,13 +244,11 @@ button.edit-btn, button.delete-btn {
 }
 
 button.edit-btn {
-    background-color: #e3e3e3;
-    color: white;
+    background-color: transparent;
 }
 
 button.delete-btn {
-    background-color: #e3e3e3;
-    color: white;
+    background-color: transparent;
 }
 
 /* Estilo responsivo */
