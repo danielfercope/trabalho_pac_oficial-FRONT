@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor Equipe</title>
-    <link rel="stylesheet" type="text/css" href="gestorControle.css">
+    <title>Gestor - Equipe</title>
+    <link rel="stylesheet" type="text/css" href="gestorEquipe.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="gestorControle.js"></script>
+    <script defer src="gestorEquipe.js"></script>
 </head>
 <body>
     <!-- Menu lateral e título da aba -->
     <div class="container">
         <aside class="sidebar">
             <div class="profile">
-                <div class="profile-img"></div>
-                <div class="profile-name">
-                    <p>{Nome Sobrenome}</p>
+                <div class="profile-img">
+                    <img src="logo.svg" alt="Amigos Em Ação">
                 </div>
             </div>
             <nav class="menu">
                 <ul>
-                    <li>Perfil</li>
-                    <li>Equipe</li>
-                    <li>Eventos</li>
-                    <li>Feedback</li>
-                </ul>
+                    <li>
+                        <a href="perfilGestor.html">Meu perfil</a>
+                    </li>
+                    <li>
+                        <a href="gestorEquipe.html" class="active">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="gestorEventos.html">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="gestorFeedback.html">Feedbacks</a>
+                    </li>
             </nav>
             <div class="logout">
-                <a href="#">Sair da Conta</a>
+                <a href="paginaPrincipal.html">Sair da Conta</a>
             </div>
         </aside>
         <main class="main-content">
             <header class="header">
-                <p>Seja <span class="username">Bem vindo, {gestor_username}</span></p>
+                <p class="username">Bem vindo,<br><span>{gestor}</span></p>
             </header>
 
             <!-- Aba principal -->
@@ -102,7 +109,7 @@
                                     <td>comida</td>
                                     <td>
                                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-                                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash" id="delete"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -112,7 +119,7 @@
                                     <td>leite</td>
                                     <td>
                                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-                                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash" id="delete"></i></button>
                                     </td>
                                 </tr>
                                 <!-- Adicione mais pessoas conforme necessário -->
